@@ -9,6 +9,7 @@
 import pymysql
 import redis
 import json as python_json
+import logging
 
 from sanic import Sanic
 from sanic import response
@@ -23,10 +24,11 @@ from set_config import *
 from setLog import Logger
 from voice_app.wavTools import *
 
+
 # 异步子线程开开启的线程数
 reactor.suggestThreadPoolSize(1)
 
-logger = Logger('./log/log')
+logger = logging.getLogger(__name__)
 
 # 继承类的目的：启动服务时预加载数据 和 添加缓存功能
 # 方法很笨，如有好的方法请建议
@@ -102,8 +104,7 @@ async def func(request):
     # 记录用户请求信息
     # 存在redis中，因为如果以后做负载均衡，可能不在通过一个服务上，用redis就能保证统一性
     # 存储用户请求信息
-    save_user_info("voice_body", voice, 1)
-
+    threads.deferToThread(save_user_info, "voice_body", voice, 1)
 
     # voice_body = read_wav(voice_path)
 
@@ -149,6 +150,7 @@ async def tag_handler(request):
 
 # 缓存音频信息
 def save_voice_body(voice_store_key, voice_body):
+
     app.cache["voice_store"].set(voice_store_key, voice_body)
 
 def save_user_info(request_info ,voice, first = None):

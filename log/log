@@ -1049,3 +1049,7 @@ sanic.exceptions.InvalidUsage: Failed when parsing body as json
 
 
 
+Received signal SIGINT. Shutting down.
+Stopping worker [6651]
+Stopping worker [6650]
+Server Stopped
