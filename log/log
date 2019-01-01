@@ -1,0 +1,1051 @@
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [14079]
+Starting worker [14078]
+
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/pymysql/connections.py", line 582, in connect
+    **kwargs)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 99, in tag_handler
+    ret = app.start_new_scene("5", "1")
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 61, in start_new_scene
+    db = pymysql.connect(host = MYSQL_HOST, port = MYSQL_POST, user = MYSQL_USER, password = MYSQL_PASS, db = MYSQL_DB)
+  File "/usr/local/lib/python3.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.7/site-packages/pymysql/connections.py", line 629, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 61] Connection refused)")
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/tag"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/pymysql/connections.py", line 582, in connect
+    **kwargs)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 99, in tag_handler
+    ret = app.start_new_scene("5", "1")
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 61, in start_new_scene
+    db = pymysql.connect(host = MYSQL_HOST, port = MYSQL_POST, user = MYSQL_USER, password = MYSQL_PASS, db = MYSQL_DB)
+  File "/usr/local/lib/python3.7/site-packages/pymysql/__init__.py", line 94, in Connect
+    return Connection(*args, **kwargs)
+  File "/usr/local/lib/python3.7/site-packages/pymysql/connections.py", line 327, in __init__
+    self.connect()
+  File "/usr/local/lib/python3.7/site-packages/pymysql/connections.py", line 629, in connect
+    raise exc
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '127.0.0.1' ([Errno 61] Connection refused)")
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [14079]
+Stopping worker [14078]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [14126]
+Starting worker [14128]
+
+Received signal SIGINT. Shutting down.
+Stopping worker [14126]
+Stopping worker [14128]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [14263]
+Starting worker [14264]
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [14263]
+Stopping worker [14264]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [14405]
+Starting worker [14406]
+
+Received signal SIGINT. Shutting down.
+Stopping worker [14406]
+Stopping worker [14405]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4195]
+Starting worker [4196]
+Received signal SIGINT. Shutting down.
+Stopping worker [4195]
+Stopping worker [4196]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4301]
+Starting worker [4302]
+Received signal SIGINT. Shutting down.
+Stopping worker [4301]
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4364]
+Starting worker [4363]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 85, in func
+    request.setHeader('Content-Type', 'multipart/form-data')
+AttributeError: 'Request' object has no attribute 'setHeader'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 85, in func
+    request.setHeader('Content-Type', 'multipart/form-data')
+AttributeError: 'Request' object has no attribute 'setHeader'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [4363]
+Stopping worker [4364]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4401]
+Starting worker [4400]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 86, in func
+    request_params = request_parameters(request)
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 111, in request_parameters
+    if request.method.decode('utf-8', 'strict') == 'GET' or request.method.decode('utf-8', 'strict') == 'DELETE':
+AttributeError: 'str' object has no attribute 'decode'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 86, in func
+    request_params = request_parameters(request)
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 111, in request_parameters
+    if request.method.decode('utf-8', 'strict') == 'GET' or request.method.decode('utf-8', 'strict') == 'DELETE':
+AttributeError: 'str' object has no attribute 'decode'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [4400]
+Stopping worker [4401]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4436]
+Starting worker [4435]
+Received signal SIGINT. Shutting down.
+Stopping worker [4436]
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4468]
+Starting worker [4469]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 87, in func
+    voice_id = request.body.get("voice")
+AttributeError: 'bytes' object has no attribute 'get'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 87, in func
+    voice_id = request.body.get("voice")
+AttributeError: 'bytes' object has no attribute 'get'
+
+
+Executing <Task finished coro=<Sanic.handle_request() done, defined at /usr/local/lib/python3.7/site-packages/sanic/app.py:561> result=None created at /usr/local/lib/python3.7/site-packages/sanic/server.py:295> took 5.634 seconds
+Received signal SIGINT. Shutting down.
+Stopping worker [4468]
+Stopping worker [4469]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4615]
+Starting worker [4614]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 87, in func
+    voice_id = request.json()
+TypeError: 'dict' object is not callable
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 87, in func
+    voice_id = request.json()
+TypeError: 'dict' object is not callable
+
+
+Executing <Task finished coro=<Sanic.handle_request() done, defined at /usr/local/lib/python3.7/site-packages/sanic/app.py:561> result=None created at /usr/local/lib/python3.7/site-packages/sanic/server.py:295> took 4.960 seconds
+Received signal SIGINT. Shutting down.
+Stopping worker [4615]
+Stopping worker [4614]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4642]
+Starting worker [4641]
+Received signal SIGINT. Shutting down.
+Stopping worker [4641]
+Stopping worker [4642]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4668]
+Starting worker [4667]
+Received signal SIGINT. Shutting down.
+Stopping worker [4668]
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4709]
+Starting worker [4708]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 88, in func
+    voice_id = request.json()
+TypeError: 'dict' object is not callable
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 88, in func
+    voice_id = request.json()
+TypeError: 'dict' object is not callable
+
+
+Executing <Task finished coro=<Sanic.handle_request() done, defined at /usr/local/lib/python3.7/site-packages/sanic/app.py:561> result=None created at /usr/local/lib/python3.7/site-packages/sanic/server.py:295> took 4.335 seconds
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/request.py", line 96, in load_json
+    self.parsed_json = loads(self.body)
+ValueError: Trailing data
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 88, in func
+    voice_id = request.json()
+  File "/usr/local/lib/python3.7/site-packages/sanic/request.py", line 90, in json
+    self.load_json()
+  File "/usr/local/lib/python3.7/site-packages/sanic/request.py", line 100, in load_json
+    raise InvalidUsage("Failed when parsing body as json")
+sanic.exceptions.InvalidUsage: Failed when parsing body as json
+
+
+Executing <Task finished coro=<Sanic.handle_request() done, defined at /usr/local/lib/python3.7/site-packages/sanic/app.py:561> result=None created at /usr/local/lib/python3.7/site-packages/sanic/server.py:295> took 4.853 seconds
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 88, in func
+    voice_id = request.json()
+TypeError: 'dict' object is not callable
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 88, in func
+    voice_id = request.json()
+TypeError: 'dict' object is not callable
+
+
+Executing <Task finished coro=<Sanic.handle_request() done, defined at /usr/local/lib/python3.7/site-packages/sanic/app.py:561> result=None created at /usr/local/lib/python3.7/site-packages/sanic/server.py:295> took 8.272 seconds
+Received signal SIGINT. Shutting down.
+Stopping worker [4709]
+Stopping worker [4708]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4751]
+Starting worker [4752]
+Received signal SIGINT. Shutting down.
+Stopping worker [4751]
+Goin' Fast @ http://0.0.0.0:8000
+Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 732, in run
+    serve_multiple(server_settings, workers)
+  File "/usr/local/lib/python3.7/site-packages/sanic/server.py", line 695, in serve_multiple
+    sock.bind((server_settings['host'], server_settings['port']))
+OSError: [Errno 48] Address already in use
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4810]
+Starting worker [4811]
+
+Executing <Task finished coro=<Sanic.handle_request() done, defined at /usr/local/lib/python3.7/site-packages/sanic/app.py:561> result=None created at /usr/local/lib/python3.7/site-packages/sanic/server.py:295> took 5.306 seconds
+Received signal SIGINT. Shutting down.
+Stopping worker [4810]
+Stopping worker [4811]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4852]
+Starting worker [4853]
+
+Received signal SIGINT. Shutting down.
+Stopping worker [4853]
+Stopping worker [4852]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4885]
+Starting worker [4886]
+
+Received signal SIGINT. Shutting down.
+Stopping worker [4886]
+Stopping worker [4885]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [4919]
+Starting worker [4918]
+Received signal SIGINT. Shutting down.
+Stopping worker [4918]
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5049]
+Starting worker [5050]
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5050]
+Stopping worker [5049]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5147]
+Starting worker [5148]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 97, in func
+    voice_time = get_wav_time(voice_path)
+  File "/Users/zhexin/Desktop/python_sanic/voice_app/wavTools.py", line 54, in get_wav_time
+    with contextlib.closing(wave.open(wav_path, 'r')) as f:
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 510, in open
+    return Wave_read(f)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 160, in __init__
+    f = builtins.open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'voice_app/voice_file/demo.wav'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 97, in func
+    voice_time = get_wav_time(voice_path)
+  File "/Users/zhexin/Desktop/python_sanic/voice_app/wavTools.py", line 54, in get_wav_time
+    with contextlib.closing(wave.open(wav_path, 'r')) as f:
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 510, in open
+    return Wave_read(f)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 160, in __init__
+    f = builtins.open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'voice_app/voice_file/demo.wav'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5148]
+Stopping worker [5147]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5184]
+Starting worker [5185]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 97, in func
+    voice_time = get_wav_time(voice_path)
+  File "/Users/zhexin/Desktop/python_sanic/voice_app/wavTools.py", line 54, in get_wav_time
+    with contextlib.closing(wave.open(wav_path, 'r')) as f:
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 510, in open
+    return Wave_read(f)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 160, in __init__
+    f = builtins.open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'python_sanic/voice_app/voice_file/demo.wav'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 97, in func
+    voice_time = get_wav_time(voice_path)
+  File "/Users/zhexin/Desktop/python_sanic/voice_app/wavTools.py", line 54, in get_wav_time
+    with contextlib.closing(wave.open(wav_path, 'r')) as f:
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 510, in open
+    return Wave_read(f)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 160, in __init__
+    f = builtins.open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'python_sanic/voice_app/voice_file/demo.wav'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5184]
+Stopping worker [5185]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5214]
+Starting worker [5215]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 97, in func
+    voice_time = get_wav_time(voice_path)
+  File "/Users/zhexin/Desktop/python_sanic/voice_app/wavTools.py", line 54, in get_wav_time
+    with contextlib.closing(wave.open(wav_path, 'r')) as f:
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 510, in open
+    return Wave_read(f)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 160, in __init__
+    f = builtins.open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'python_sanic/voice_app/voice_files/demo.wav'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 97, in func
+    voice_time = get_wav_time(voice_path)
+  File "/Users/zhexin/Desktop/python_sanic/voice_app/wavTools.py", line 54, in get_wav_time
+    with contextlib.closing(wave.open(wav_path, 'r')) as f:
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 510, in open
+    return Wave_read(f)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 160, in __init__
+    f = builtins.open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'python_sanic/voice_app/voice_files/demo.wav'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5215]
+Stopping worker [5214]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5242]
+Starting worker [5243]
+Invalid response object for url b'/nlp_server/v1', Expected Type: HTTPResponse, Actual Type: <class 'dict'>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/server.py", line 334, in write_response
+    response.output(
+AttributeError: 'dict' object has no attribute 'output'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5242]
+Stopping worker [5243]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5282]
+Starting worker [5283]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 107, in func
+    voice_json = json.dumps(voice_dict)
+AttributeError: 'function' object has no attribute 'dumps'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 107, in func
+    voice_json = json.dumps(voice_dict)
+AttributeError: 'function' object has no attribute 'dumps'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5283]
+Stopping worker [5282]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5310]
+Starting worker [5311]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 107, in func
+    voice_json = json.dumps(voice_dict)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 107, in func
+    voice_json = json.dumps(voice_dict)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5311]
+Stopping worker [5310]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5345]
+Starting worker [5346]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 107, in func
+    voice_json = python_json.dumps(voice_dict)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 107, in func
+    voice_json = python_json.dumps(voice_dict)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5346]
+Stopping worker [5345]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5386]
+Starting worker [5387]
+Invalid response object for url b'/nlp_server/v1', Expected Type: HTTPResponse, Actual Type: <class 'bytes'>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/server.py", line 334, in write_response
+    response.output(
+AttributeError: 'bytes' object has no attribute 'output'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5387]
+Stopping worker [5386]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5420]
+Starting worker [5421]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf3 in position 54: invalid continuation byte
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).decode("utf-8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf3 in position 54: invalid continuation byte
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5420]
+Stopping worker [5421]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5449]
+Starting worker [5450]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).encoding("utf-8")
+AttributeError: 'bytes' object has no attribute 'encoding'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).encoding("utf-8")
+AttributeError: 'bytes' object has no attribute 'encoding'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5450]
+Stopping worker [5449]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5477]
+Starting worker [5478]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).encode("utf-8")
+AttributeError: 'bytes' object has no attribute 'encode'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).encode("utf-8")
+AttributeError: 'bytes' object has no attribute 'encode'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5478]
+Stopping worker [5477]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5519]
+Starting worker [5520]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).encode("utf-8")
+AttributeError: 'bytes' object has no attribute 'encode'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).encode("utf-8")
+AttributeError: 'bytes' object has no attribute 'encode'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5520]
+Stopping worker [5519]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5546]
+Starting worker [5547]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 107, in func
+    voice_json = python_json.dumps(voice_dict)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 107, in func
+    voice_json = python_json.dumps(voice_dict)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type bytes is not JSON serializable
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5546]
+Stopping worker [5547]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5574]
+Starting worker [5575]
+Received signal SIGINT. Shutting down.
+Stopping worker [5574]
+Stopping worker [5575]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5599]
+Starting worker [5600]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 108, in func
+    request.setHeader('Dlg-info', voice_json)
+AttributeError: 'Request' object has no attribute 'setHeader'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 108, in func
+    request.setHeader('Dlg-info', voice_json)
+AttributeError: 'Request' object has no attribute 'setHeader'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5600]
+Stopping worker [5599]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5655]
+Starting worker [5656]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).encoding='utf8'
+AttributeError: 'bytes' object has no attribute 'encoding'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).encoding='utf8'
+AttributeError: 'bytes' object has no attribute 'encoding'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5656]
+Stopping worker [5655]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5697]
+Starting worker [5698]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 101, in func
+    voice_body = bytes.decode(voice_body)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf3 in position 54: invalid continuation byte
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 101, in func
+    voice_body = bytes.decode(voice_body)
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf3 in position 54: invalid continuation byte
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5697]
+Stopping worker [5698]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5737]
+Starting worker [5738]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).decode("utf8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf3 in position 54: invalid continuation byte
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 100, in func
+    voice_body = read_wav(voice_path).decode("utf8")
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xf3 in position 54: invalid continuation byte
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5738]
+Stopping worker [5737]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5770]
+Starting worker [5771]
+Received signal SIGINT. Shutting down.
+Stopping worker [5771]
+Stopping worker [5770]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5795]
+Starting worker [5796]
+Received signal SIGINT. Shutting down.
+Stopping worker [5795]
+Stopping worker [5796]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5870]
+Starting worker [5871]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 592, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.7/site-packages/sanic/router.py", line 359, in get
+    return self._get(request.path, request.method, '')
+  File "/usr/local/lib/python3.7/site-packages/sanic/router.py", line 396, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /nlp_server/v1
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5871]
+Stopping worker [5870]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5903]
+Starting worker [5904]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 592, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.7/site-packages/sanic/router.py", line 359, in get
+    return self._get(request.path, request.method, '')
+  File "/usr/local/lib/python3.7/site-packages/sanic/router.py", line 396, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /nlp_server/v1
+
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 97, in func
+    voice_time = get_wav_time(voice_path)
+  File "/Users/zhexin/Desktop/python_sanic/voice_app/wavTools.py", line 54, in get_wav_time
+    with contextlib.closing(wave.open(wav_path, 'r')) as f:
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 510, in open
+    return Wave_read(f)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 160, in __init__
+    f = builtins.open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'voice_app/voice_files/123'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 97, in func
+    voice_time = get_wav_time(voice_path)
+  File "/Users/zhexin/Desktop/python_sanic/voice_app/wavTools.py", line 54, in get_wav_time
+    with contextlib.closing(wave.open(wav_path, 'r')) as f:
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 510, in open
+    return Wave_read(f)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 160, in __init__
+    f = builtins.open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'voice_app/voice_files/123'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5904]
+Stopping worker [5903]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5931]
+Starting worker [5932]
+Received signal SIGINT. Shutting down.
+Stopping worker [5932]
+Stopping worker [5931]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5965]
+Starting worker [5966]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 97, in func
+    voice_time = get_wav_time(voice_path)
+  File "/Users/zhexin/Desktop/python_sanic/voice_app/wavTools.py", line 54, in get_wav_time
+    with contextlib.closing(wave.open(wav_path, 'r')) as f:
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 510, in open
+    return Wave_read(f)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 160, in __init__
+    f = builtins.open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'voice_app/voice_files/123'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 97, in func
+    voice_time = get_wav_time(voice_path)
+  File "/Users/zhexin/Desktop/python_sanic/voice_app/wavTools.py", line 54, in get_wav_time
+    with contextlib.closing(wave.open(wav_path, 'r')) as f:
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 510, in open
+    return Wave_read(f)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/wave.py", line 160, in __init__
+    f = builtins.open(f, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'voice_app/voice_files/123'
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [5966]
+Stopping worker [5965]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [5992]
+Starting worker [5993]
+Received signal SIGINT. Shutting down.
+Stopping worker [5993]
+Stopping worker [5992]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [6022]
+Starting worker [6023]
+Invalid response object for url b'/nlp_server/v1', Expected Type: HTTPResponse, Actual Type: <class 'coroutine'>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/server.py", line 334, in write_response
+    response.output(
+AttributeError: 'coroutine' object has no attribute 'output'
+
+
+/usr/local/lib/python3.7/site-packages/sanic/server.py:635: RuntimeWarning: coroutine 'file' was never awaited
+Coroutine created at (most recent call last)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/multiprocessing/process.py", line 112, in start
+    self._popen = self._Popen(self)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/multiprocessing/context.py", line 223, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/multiprocessing/context.py", line 277, in _Popen
+    return Popen(process_obj)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/multiprocessing/popen_fork.py", line 74, in _launch
+    code = process_obj._bootstrap()
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/multiprocessing/process.py", line 297, in _bootstrap
+    self.run()
+  File "/usr/local/Cellar/python/3.7.0/Frameworks/Python.framework/Versions/3.7/lib/python3.7/multiprocessing/process.py", line 99, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib/python3.7/site-packages/sanic/server.py", line 635, in serve
+    loop.run_forever()
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 109, in func
+    return response.file(voice_path)
+  loop.run_forever()
+
+Received signal SIGINT. Shutting down.
+Stopping worker [6023]
+Stopping worker [6022]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [6056]
+Starting worker [6057]
+Received signal SIGINT. Shutting down.
+Stopping worker [6057]
+Stopping worker [6056]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [6102]
+Starting worker [6103]
+
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [6103]
+Stopping worker [6102]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [6156]
+Starting worker [6157]
+
+Received signal SIGINT. Shutting down.
+Stopping worker [6157]
+Stopping worker [6156]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [6291]
+Starting worker [6290]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 92, in func
+    request.setHeader('Content-Type', 'multipart/form-data')
+AttributeError: 'Request' object has no attribute 'setHeader'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 92, in func
+    request.setHeader('Content-Type', 'multipart/form-data')
+AttributeError: 'Request' object has no attribute 'setHeader'
+
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 92, in func
+    流程：下载音频，读取音频信息并返回
+AttributeError: 'Request' object has no attribute 'setHeader'
+
+Exception occurred while handling uri: "http://0.0.0.0:8000/nlp_server/v1"
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 92, in func
+    流程：下载音频，读取音频信息并返回
+AttributeError: 'Request' object has no attribute 'setHeader'
+
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 592, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "/usr/local/lib/python3.7/site-packages/sanic/router.py", line 359, in get
+    return self._get(request.path, request.method, '')
+  File "/usr/local/lib/python3.7/site-packages/sanic/router.py", line 419, in _get
+    raise NotFound('Requested URL {} not found'.format(url))
+sanic.exceptions.NotFound: Requested URL /voice_server/v1 not found
+
+
+Received signal SIGINT. Shutting down.
+Stopping worker [6290]
+Stopping worker [6291]
+Server Stopped
+Goin' Fast @ http://0.0.0.0:8000
+Starting worker [6650]
+Starting worker [6651]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/request.py", line 96, in load_json
+    self.parsed_json = loads(self.body)
+ValueError: Unexpected character in found when decoding object value
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/site-packages/sanic/app.py", line 603, in handle_request
+    response = await response
+  File "/Users/zhexin/Desktop/python_sanic/server.py", line 98, in func
+    voice = request.json
+  File "/usr/local/lib/python3.7/site-packages/sanic/request.py", line 90, in json
+    self.load_json()
+  File "/usr/local/lib/python3.7/site-packages/sanic/request.py", line 100, in load_json
+    raise InvalidUsage("Failed when parsing body as json")
+sanic.exceptions.InvalidUsage: Failed when parsing body as json
+
+
+
