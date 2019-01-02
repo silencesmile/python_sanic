@@ -11,7 +11,7 @@ MYSQL_HOST = "127.0.0.1"
 MYSQL_POST = 3306
 MYSQL_USER = "root"
 MYSQL_PASS = ""
-MYSQL_DB = "autodialer"
+MYSQL_DB = "voice_db"
 
 # redis设置
 REDIS_HOST = "127.0.0.1"

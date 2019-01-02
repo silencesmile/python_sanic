@@ -21,7 +21,6 @@ from cacheout import CacheManager, LRUCache
 from twisted.internet import threads, reactor
 
 from set_config import *
-from setLog import Logger
 from voice_app.wavTools import *
 
 
@@ -64,27 +63,6 @@ class Sanic_server(Sanic):
         redis_tool = redis.Redis(connection_pool=pool)
         return redis_tool
 
-    def start_new_scene(self, scene_id, version):
-        """从数据库里读取一个scene的数据（话术模板）"""
-
-        db = pymysql.connect(host = MYSQL_HOST, port = MYSQL_POST, user = MYSQL_USER, password = MYSQL_PASS, db = MYSQL_DB)
-        cursor = db.cursor()
-
-        sql = "SELECT * FROM `sys_user`"
-
-        try:
-            cursor.execute(sql)
-            results = cursor.fetchall()
-
-            # print(results)
-
-            return results
-        except:
-
-            return False
-        finally:
-            db.close()
-
 Config.REQUEST_TIMEOUT = 3
 app = Sanic_server()
 
@@ -97,16 +75,28 @@ async def func(request):
     :return:  音频信息
     '''
 
+    # 通过模板向数据库请求url信息
     voice = request.json
-    voice_id = voice.get("voice")
+    template = voice.get("template")
+
+    # 先判断内存中
+    boolen = app.cache["mysql_store"].has(template)
+    if boolen:
+        voice_info = app.cache["mysql_store"].get(template)
+    else:
+        voice_info = start_new_scene(template)
+
+    # 'http://www.python_sanic.com/demo.wav'
+    voice_url = voice_info[2]
+
+    # 因为音频网址为假的，所以下载就略过
+    voice_id = voice_url.split("/")[-1]
     voice_path = "voice_app/voice_files/" + voice_id
 
     # 记录用户请求信息
     # 存在redis中，因为如果以后做负载均衡，可能不在通过一个服务上，用redis就能保证统一性
     # 存储用户请求信息
     threads.deferToThread(save_user_info, "voice_body", voice, 1)
-
-    # voice_body = read_wav(voice_path)
 
     # 判断缓存中是否包含次音频信息，
     # 如果存在直接获取，如果不存在，在先获取，再返回，然后异步存储
@@ -126,27 +116,59 @@ async def func(request):
 @app.route('/voice_server/<voice_id>', methods=['GET'])
 async def person_handler(request, name):
 
-    voice = request.json
-    voice_id = voice.get("voice")
-    voice_path = "voice_app/voice_files/" + voice_id
+    try:
+        voice = request.json
+        voice_id = voice.get("voice")
+        voice_path = "voice_app/voice_files/" + voice_id
 
-    voice_time = get_wav_time(voice_path)
+        voice_time = get_wav_time(voice_path)
 
-    response_dict = {"voice_time": voice_time}
+        response_dict = {
+            "error":0,
+            "err_msg":"",
+            "voice_time": voice_time
+            }
 
-    voice_json = python_json.dumps(response_dict)
+        voice_json = python_json.dumps(response_dict)
 
-    return voice_json
+        return voice_json
+    except Exception as e:
+        logger.error(e)
+        response_dict = {
+                        "error": 1,
+                        "err_msg": "请求错误"
+                        }
 
+        voice_json = python_json.dumps(response_dict)
 
-@app.route('/tag')
-async def tag_handler(request):
-    for i in range(10):
-        ret = app.start_new_scene("5", "1")
-        print(ret)
+        return voice_json
 
-    response = json({"hello": "world"})
-    return response
+def start_new_scene(template):
+    """从数据库里读取一个scene的数据（话术模板）"""
+
+    db = pymysql.connect(host = MYSQL_HOST, port = MYSQL_POST, user = MYSQL_USER, password = MYSQL_PASS, db = MYSQL_DB)
+    cursor = db.cursor()
+
+    sql = "SELECT * FROM `voiceInfo` where template='{}'".format(template)
+
+    try:
+        cursor.execute(sql)
+        results = cursor.fetchall()[0]
+
+        # 存储模板信息
+        app.cache["mysql_store"].set(template, results)
+
+        return results
+    except:
+
+        return False
+    finally:
+        db.close()
+
+# 存储mysql模板信息
+def save_template_info(template_code, template_info):
+    app.cache["mysql_store"].set(template_code, template_info)
+
 
 # 缓存音频信息
 def save_voice_body(voice_store_key, voice_body):
@@ -167,12 +189,10 @@ def save_user_info(request_info ,voice, first = None):
         voice_info[request_info] = voice
         app.redis_obj.setex(user_id, voice_info, 6000)
 
-
 # 防止等待超时 服务器崩溃
 @app.exception(RequestTimeout)
 def timeout(request, exception):
     return response.text('RequestTimeout from error_handler.', 408)
-
 
 
 if __name__ == '__main__':
