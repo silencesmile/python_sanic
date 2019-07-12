@@ -13,20 +13,18 @@ import logging
 
 from sanic import Sanic
 from sanic import response
-from sanic.response import text
-from sanic.response import json
 from sanic.config import Config
+from sanic.log import logger
 from sanic.exceptions import RequestTimeout
 from cacheout import CacheManager, LRUCache
 from twisted.internet import threads, reactor
+from config.dev_config import DevConfig
 
-from set_config import *
 from voice_app.wavTools import *
 
 
 # 异步子线程开开启的线程数
 reactor.suggestThreadPoolSize(1)
-
 logger = logging.getLogger(__name__)
 
 # 继承类的目的：启动服务时预加载数据 和 添加缓存功能
@@ -38,7 +36,7 @@ class Sanic_server(Sanic):
         super(Sanic_server, self).__init__()
 
         self.dict = {}
-        self.redis_obj = self._create_redis_connection_pool(REDIS_HOST, REDIS_POST, REDIS_PASS, SELECT_DB)
+        self.redis_obj = self._create_redis_connection_pool(app.config.REDIS_HOST, app.config.REDIS_POST, app.config.REDIS_PASS, app.config.SELECT_DB)
 
         '''
         当你经常使用某些数据模板和信息时就要考虑缓存了
@@ -65,6 +63,14 @@ class Sanic_server(Sanic):
 
 Config.REQUEST_TIMEOUT = 3
 app = Sanic_server()
+app.config.from_object(DevConfig)
+
+@app.route("/")
+async def test(request):
+
+    logger.info('Here is your log')
+
+    return response.json({"hello": "world"})
 
 @app.route("/voice_server/v1", methods=["POST"])
 async def func(request):
@@ -110,11 +116,11 @@ async def func(request):
         # 子线程异步音频信息
         threads.deferToThread(save_voice_body, voice_id, voice_body)
 
-    return text(voice_body)
+    return response.raw(voice_body)
 
 
 @app.route('/voice_server/<voice_id>', methods=['GET'])
-async def person_handler(request, name):
+async def person_handler(request):
 
     try:
         voice = request.json
@@ -143,10 +149,30 @@ async def person_handler(request, name):
 
         return voice_json
 
+@app.route('/image_data', methods=['GET'])
+async def image_data(request):
+
+    try:
+
+        with open("voice_app/voice_files/zxc.jpeg", "rb") as f:
+            data = f.read()
+
+        return response.raw(data)
+    except Exception as e:
+        logger.error(e)
+        response_dict = {
+                        "error": 1,
+                        "err_msg": "请求错误"
+                        }
+
+        voice_json = python_json.dumps(response_dict)
+
+        return voice_json
+
 def start_new_scene(template):
     """从数据库里读取一个scene的数据（话术模板）"""
 
-    db = pymysql.connect(host = MYSQL_HOST, port = MYSQL_POST, user = MYSQL_USER, password = MYSQL_PASS, db = MYSQL_DB)
+    db = pymysql.connect(host = app.config.MYSQL_HOST, port = app.config.MYSQL_POST, user = app.config.MYSQL_USER, password = app.config.MYSQL_PASS, db = app.config.MYSQL_DB)
     cursor = db.cursor()
 
     sql = "SELECT * FROM `voiceInfo` where template='{}'".format(template)
