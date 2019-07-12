@@ -18,6 +18,8 @@ from sanic.log import logger
 from sanic.exceptions import RequestTimeout
 from cacheout import CacheManager, LRUCache
 from twisted.internet import threads, reactor
+
+from config.const import *
 from config.dev_config import DevConfig
 
 from voice_app.wavTools import *
@@ -36,7 +38,7 @@ class Sanic_server(Sanic):
         super(Sanic_server, self).__init__()
 
         self.dict = {}
-        self.redis_obj = self._create_redis_connection_pool(app.config.REDIS_HOST, app.config.REDIS_POST, app.config.REDIS_PASS, app.config.SELECT_DB)
+        self.redis_obj = self._create_redis_connection_pool(REDIS_HOST, REDIS_POST, REDIS_PASS, SELECT_DB)
 
         '''
         当你经常使用某些数据模板和信息时就要考虑缓存了

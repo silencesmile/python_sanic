@@ -19,3 +19,9 @@ class Config():
     # Application config
     TIMEZONE = 'Asia/Shanghai'
     BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
+    # redis设置
+    REDIS_HOST = "127.0.0.1"
+    REDIS_POST = 6379
+    REDIS_PASS = ""
+    SELECT_DB = 2
