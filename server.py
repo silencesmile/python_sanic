@@ -223,6 +223,12 @@ def timeout(request, exception):
     return response.text('RequestTimeout from error_handler.', 408)
 
 
-if __name__ == '__main__':
+def run_as_server():
     # work 接口监听者   和内核合数相同
     app.run(host="0.0.0.0", port=8000, workers=2, debug=True)
+
+if __name__ == '__main__':
+    # # work 接口监听者   和内核合数相同
+    # app.run(host="0.0.0.0", port=8000, workers=2, debug=True)
+
+    run_as_server()
